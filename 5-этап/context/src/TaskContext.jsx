@@ -5,22 +5,11 @@ export const TaskContext = createContext();
 export const TaskProvider = (props) => {
   const [tasks, setTasks] = useState([]);
 
-  const addTask = (task) => {
-    const newTask = {text: task, isCompete: false}
-    setTasks([...tasks, newTask]);
-  };
+  const addTask = (task) => {};
 
-  const removeTask = (idx) => {
-    const newTasks = tasks.filter((t, index) => index !== idx)
-    setTasks(newTasks)
-  };
+  const removeTask = (idx) => {};
 
-  const completeTask = (idx) => {
-    const newTasks = tasks.map((suleim, index) => (
-      index === idx ? {...suleim, isCompete: !suleim.isCompete} : suleim
-    ))
-    setTasks(newTasks)
-  };
+  const completeTask = (idx) => {};
 
   const state = {
     tasks,
